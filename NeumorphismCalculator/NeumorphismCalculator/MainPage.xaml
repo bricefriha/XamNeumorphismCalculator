@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:neo="clr-namespace:Xamarin.Forms.NeoControls;assembly=Xamarin.Forms.NeoControls"
+             x:Class="NeumorphismCalculator.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NeoButton"
+                   x:Key="Button">
+                <Setter Property="Elevation" 
+                        Value=".25"/>
+                <Setter Property="CornerRadius" 
+                        Value="20"/>
+                <Setter Property="HorizontalOptions" 
+                        Value="Fill"/>
+                <Setter Property="VerticalOptions" 
+                        Value="Fill"/>
+                <Setter Property="BackgroundColor"
+                        Value="#e3edf7" />
+            </Style>
+            <Style TargetType="Label"
+                   x:Key="TextButton">
+                <Setter Property="FontSize" 
+                        Value="20"/>
+                <Setter Property="FontAttributes" 
+                        Value="Bold"/>
+                <Setter Property="HorizontalOptions"
+                        Value="Center"/>
+                <Setter Property="VerticalOptions"
+                        Value="Center"/>
+                <Setter Property="TextColor"
+                        Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid BackgroundColor="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1.5*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1"
+              BackgroundColor="#e3edf7"
+              Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- AC -->
+            <NeoButton CornerRadius="50,20,20,20"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Style="{DynamicResource Button}">
+                <Label Text="AC"
+                       TextColor="DarkOrange"
+                       Style="{StaticResource TextButton}"/>
+            </NeoButton>
+
+            <!-- C -->
+            <NeoButton Grid.Column="1"
+                       Grid.Row="0"
+                       Style="{DynamicResource Button}">
+                <Label Text="C"
+                       TextColor="DarkRed"
+                       Style="{StaticResource TextButton}"/>
+            </NeoButton>
+
+            <!-- % -->
+            <NeoButton Grid.Column="2"
+                       Grid.Row="0"
+                       Style="{DynamicResource Button}">
+                <Label Text="%"
+                       TextColor="Purple"
+                       Style="{StaticResource TextButton}"/>
+            </NeoButton>
+            
+            <!-- Numbers -->
+            <!---->
+            <!-- First row -->
+            <NeoButton Grid.Column="0"
+                       Grid.Row="1"
+                       Style="{DynamicResource Button}">
+                <Label Text="7"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <NeoButton Grid.Column="1"
+                       Grid.Row="1"
+                       Style="{DynamicResource Button}">
+                <Label Text="8"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <NeoButton Grid.Column="2"
+                       Grid.Row="1"
+                       Style="{DynamicResource Button}">
+                <Label Text="9"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <!-- Second row -->
+            <NeoButton Grid.Column="0"
+                       Grid.Row="2"
+                       Style="{DynamicResource Button}">
+                <Label Text="4"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <NeoButton Grid.Column="1"
+                       Grid.Row="2"
+                       Style="{DynamicResource Button}">
+                <Label Text="5"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <NeoButton Grid.Column="2"
+                       Grid.Row="2"
+                       Style="{DynamicResource Button}">
+                <Label Text="6"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <!-- Third row -->
+            <NeoButton Grid.Column="0"
+                       Grid.Row="3"
+                       Style="{DynamicResource Button}">
+                <Label Text="1"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <NeoButton Grid.Column="1"
+                       Grid.Row="3"
+                       Style="{DynamicResource Button}">
+                <Label Text="2"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <NeoButton Grid.Column="2"
+                       Grid.Row="3"
+                       Style="{DynamicResource Button}">
+                <Label Text="3"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <!-- Fourth row -->
+            <NeoButton Grid.Column="1"
+                       Grid.Row="4"
+                       Style="{DynamicResource Button}">
+                <Label Text="0"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            
+            <!-- Operators -->
+
+            <!-- Divide -->
+            <NeoButton CornerRadius="20,50,20,20"
+                       Grid.Column="3"
+                       Grid.Row="0"
+                       Style="{DynamicResource Button}">
+                <Label Text="/"
+                       FontSize="30"
+                       TextColor="DarkCyan"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <!-- time -->
+            <NeoButton 
+                       Grid.Column="3"
+                       Grid.Row="1"
+                       Style="{DynamicResource Button}">
+                <Label Text="x"
+                       FontSize="30"
+                       TextColor="DarkCyan"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <!-- Minus -->
+            <NeoButton 
+                       Grid.Column="3"
+                       Grid.Row="2"
+                       Style="{DynamicResource Button}">
+                <Label Text="-"
+                       FontSize="30"
+                       TextColor="DarkCyan"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <!-- Plus -->
+            <NeoButton 
+                       Grid.Column="3"
+                       Grid.Row="3"
+                       Style="{DynamicResource Button}">
+                <Label Text="+"
+                       FontSize="30"
+                       TextColor="DarkCyan"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            
+            <!-- Other controls -->
+            <!---->
+            <!--Dot-->
+            <NeoButton Grid.Column="2"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="4"
+                       Style="{DynamicResource Button}">
+                <Label Text="="
+                       FontSize="30"
+                       TextColor="ForestGreen"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+            <!-- Equals -->
+            <NeoButton Grid.Column="0"
+                       Grid.Row="4"
+                       Style="{DynamicResource Button}">
+                <Label Text="."
+                       FontSize="30"
+                       TextColor="DarkCyan"
+                       Style="{StaticResource TextButton}" />
+            </NeoButton>
+
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
