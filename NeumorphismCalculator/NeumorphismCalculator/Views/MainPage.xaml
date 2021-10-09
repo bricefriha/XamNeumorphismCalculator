@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:neo="clr-namespace:Xamarin.Forms.NeoControls;assembly=Xamarin.Forms.NeoControls"
-             x:Class="NeumorphismCalculator.MainPage">
+             x:Class="NeumorphismCalculator.Views.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="NeoButton"
@@ -79,7 +79,8 @@
                        Grid.Row="0"
                        Style="{DynamicResource Button}">
                 <Label Text="%"
-                       TextColor="Purple"
+                       FontSize="25"
+                       TextColor="DarkSlateGray"
                        Style="{StaticResource TextButton}"/>
             </NeoButton>
             
@@ -159,7 +160,7 @@
                        Style="{DynamicResource Button}">
                 <Label Text="/"
                        FontSize="30"
-                       TextColor="DarkCyan"
+                       TextColor="DarkSlateGray"
                        Style="{StaticResource TextButton}" />
             </NeoButton>
             <!-- time -->
@@ -168,8 +169,8 @@
                        Grid.Row="1"
                        Style="{DynamicResource Button}">
                 <Label Text="x"
-                       FontSize="30"
-                       TextColor="DarkCyan"
+                       FontSize="25"
+                       TextColor="DarkSlateGray"
                        Style="{StaticResource TextButton}" />
             </NeoButton>
             <!-- Minus -->
@@ -178,8 +179,8 @@
                        Grid.Row="2"
                        Style="{DynamicResource Button}">
                 <Label Text="-"
-                       FontSize="30"
-                       TextColor="DarkCyan"
+                       FontSize="25"
+                       TextColor="DarkSlateGray"
                        Style="{StaticResource TextButton}" />
             </NeoButton>
             <!-- Plus -->
@@ -188,8 +189,8 @@
                        Grid.Row="3"
                        Style="{DynamicResource Button}">
                 <Label Text="+"
-                       FontSize="30"
-                       TextColor="DarkCyan"
+                       FontSize="25"
+                       TextColor="DarkSlateGray"
                        Style="{StaticResource TextButton}" />
             </NeoButton>
             
@@ -211,7 +212,6 @@
                        Style="{DynamicResource Button}">
                 <Label Text="."
                        FontSize="30"
-                       TextColor="DarkCyan"
                        Style="{StaticResource TextButton}" />
             </NeoButton>
 
